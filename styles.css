@@ -1,9 +1,120 @@
-html {
-    width: 100%;
-    height: 100%;
+* {
+    box-sizing: border-box;
 }
-/*body*/
+/* body */
+    body {
+        margin: 0px;
+        width: 100%;
+    }
 
-body {
+/* header */
+    header {
+        display: block;
+        width: 100%;
+        height: 10vh;
+    }
+
+    .nav-logo {
+        font-size: 30px;
+        float: left;
+        margin: 15px;
+    }
+
+    .nav-logo a {
+        text-decoration: none;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding-right: 20px;
+        overflow: hidden;
+        background-color: white;
+        float: right;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    li a:hover {
+        color: lightslategray;
+    }
+
+    .burger  {
+        float: right;
+        display: none;
+        margin: 15px;
+        cursor: pointer;
+    }
+
+    .burger  div{
+        width: 25px;
+        height: 2px;
+        background-color: black;
+        margin: 5px;
+    }
+
+/* footer */
+footer {
+    left: 0;
+    bottom: 0;
     width: 100%;
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+@media screen and (max-width: 1024px) {
+
+
+    }
+@media screen and (max-width: 760px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links{
+        display: flex;
+        position: absolute;
+        right: 0px;
+        height: 80vh;
+        top: 8vh;
+        background-color: grey;
+        flex-direction: column;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    left: 0;
+    transform: translate(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translate(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
 }
