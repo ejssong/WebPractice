@@ -8,8 +8,7 @@ const navSlide = () => {
     });
     //Animate links
     navLinks.forEach((link,index) => {
-        link.style.animation = 'navLinkFade 0.5s ease forward $(index / 4)s' ;
-        console.log(index /7);
+        link.style.animation = 'navLinkFade 0.8s ease forward $(index/7)s' ;
     });
 }
 
