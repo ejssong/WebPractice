@@ -5,15 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <script src="about.js"></script>
     <title>Eunjin Song Portfolio</title>
+
 </head>
 
 <body>
+    <header>
     <?php 
         readfile("./header.php");
     ?>     
     </header>
-    <div class="timeline"></div>
+    <!--
+    <div class="photo">
+        <img src="" alt="index photo"> </img>
+
+    </div>
+    
+    <div class="contact">
+        <button class="contact_button" type="button">Contact Me</button>
+    </div>
+    -->
+    
+    <div class="project_image">
+        <div class="image_set">
+            <p> Projects </p> 
+            <a href="project.html#1" onclick="currentSlide(1)"><img src="project1.jpeg" alt="project1 image"></img></a>
+            <a href="project.html#2"><img src="project2.jpeg" alt="project2 image"></img></a>
+            <a href="project.html#3"><img src="photo.jpeg" alt="project3 image"></img></a>
+        </div>
+     </div>
+
+   
     <footer>
         <p>&copy;<span id="date"></span> 2020 Eunjin Song. All rights reserved.</p>
     </footer>

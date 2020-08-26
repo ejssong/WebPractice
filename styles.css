@@ -3,7 +3,7 @@
 }
 /* body */
     body {
-        margin: 0px;
+        margin: 0;
         width: 100%;
     }
 
@@ -12,10 +12,14 @@
         display: block;
         width: 100%;
         height: 10vh;
+        margin-top: 10px;
     }
 
     .nav-logo {
         font-size: 30px;
+        font-family: Didot;
+        text-align: -webkit-center;
+        padding-left: 20px;
         float: left;
         margin: 15px;
     }
@@ -23,22 +27,21 @@
     .nav-logo a {
         text-decoration: none;
     }
-    .nav-links li{
-        margin-top: 20px;
-    }
-    ul {
+
+    nav ul {
         list-style-type: none;
-        padding-right: 20px;
+        padding-right: 40px;
+        /* top: 0; */
         overflow: hidden;
         background-color: white;
         float: right;
     }
 
-    li {
+    nav li {
         float: left;
     }
 
-    li a {
+    nav li a {
         display: block;
         color: black;
         /*text-align: center;*/
@@ -47,7 +50,7 @@
         font-size: 18px;
     }
     
-    li a:hover {
+    nav li a:hover {
         color: red;
     }
 
@@ -65,6 +68,108 @@
         margin: 5px;
     }
 
+/* body */
+    .photo img  { 
+        float: left;
+        width: 100%;;
+        hegight: 20%;
+        object-fit: cover;
+    }
+    .contact {
+        border: none;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    .contact_button{
+        border-radius: 30px;
+    }
+/* project */ 
+    .project_image {
+        width: 100%;
+        text-align: center;
+        
+    }
+    .image_set {
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 50%; */
+    }
+    .project_image p {
+        display: block;
+        font-family: cursive;
+        font-size: 20px;
+        text-align: center;
+    }
+    .project_image img{
+        width: 350px;
+        hegiht: 300px;
+        object-fit: cover;
+        margin: 20px; 
+        text-align: center;
+    }
+
+    .image_set img:hover {
+        -moz-box-shadow: 0 0 20px #ccc;
+        -webkit-box-shadow: 0 0 10px #ccc;
+        box-shadow: 0 0 30px #ccc;
+    }
+/* project Description */
+    .aboutMe {
+        width: 100%;
+        position:relative;
+        margin:auto;
+    }
+
+    .aboutMe a{
+        position:fixed;
+    }
+
+    .project {
+        display: none;
+        text-align: center; 
+    }
+
+    .project_desc h5{
+        text-align:center;
+        font-size: 25px;
+    }
+
+    .project img{
+        position: relative;
+        verticle-align: center;
+        margin: auto;
+        width: 450px;
+        hegith: 400px;
+    }
+    
+    .project li{
+        list-style-type: none;
+
+    }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: black;
+        font-weight: bold;
+        font-size: 25px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px; 
+    }
 /* footer */
 footer {
     position: absolute;
@@ -95,16 +200,20 @@ footer {
         left:0;
         /*right:0;*/
         top: 8vh;
-        background-color: grey;
+        background-color: white;
         flex-direction: column;
+     
         align-item: center;
         transform: translate(100%);
-        opacity: 0.5;
+        /*opacity: 0.4; */
         transition: transform 0.5s ease-in-out;
     }
+    
     .nav-links li {
         padding-bottom: 10px;
+
     }
+    
     .burger {
         display: block;
     }
