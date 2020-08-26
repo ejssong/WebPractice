@@ -12,13 +12,12 @@
         display: block;
         width: 100%;
         height: 10vh;
-        margin-top: 10px;
+        /* background-color: white; */
     }
 
     .nav-logo {
         font-size: 30px;
         font-family: Didot;
-        text-align: -webkit-center;
         padding-left: 20px;
         float: left;
         margin: 15px;
@@ -72,8 +71,8 @@
     .photo img  { 
         float: left;
         width: 100%;;
-        hegight: 20%;
-        object-fit: cover;
+        height: ;
+        object-fit: contain;
     }
     .contact {
         border: none;
@@ -86,17 +85,60 @@
     .contact_button{
         border-radius: 30px;
     }
-/* project */ 
-    .project_image {
+/* about me */
+    .about_me {
+        display: inline-block;
+        position: static;
         width: 100%;
+        text-align: center;
+        /* height: 35%; */
+    }
+    .about_me h3, .project_image h3 {
+        font-family: cursive;
+        font-size: 20px;
         text-align: center;
         
     }
-    .image_set {
-        position: relative;
-        display: block;
+    #image_right {
+        width: 40%;
+        height: auto;
+        float: right;
+        right: 0;
+    }
+
+    
+    #txt {
+        width: 50%;
+        height: 400px;
+        /*background-color: lightgrey;*/
+    }
+    .about_me img{
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        /* float: right; */
+    }
+    .about_me #txt {
+        display: inline-block;
+        vertical-align: center;
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
+        float: left;
+    }
+/* project */ 
+    .project_image {
+        width: 100%;
+        display: block;
+        position: static;
+        /* float: left; */
+        /* text-align: center; */
+    }
+    .image_set {
+        position: inherit;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
         /* width: 50%; */
     }
     .project_image p {
@@ -106,10 +148,10 @@
         text-align: center;
     }
     .project_image img{
-        width: 350px;
-        hegiht: 300px;
-        object-fit: cover;
-        margin: 20px; 
+        width: 400px;
+        height: 350px;
+        object-fit: contain;
+        margin: 20px;
         text-align: center;
     }
 
@@ -141,10 +183,11 @@
 
     .project img{
         position: relative;
-        verticle-align: center;
+        vertical-align: center;
+        object-fit: contain;
         margin: auto;
-        width: 450px;
-        hegith: 400px;
+        width: 500px;
+        height: 400px;
     }
     
     .project li{
@@ -172,7 +215,8 @@
     }
 /* footer */
 footer {
-    position: absolute;
+    display: block;
+    position: static;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -184,11 +228,10 @@ footer {
     background-color: white;
 }
 
-@media screen and (max-width: 1024px) {
-
-
-    }
-@media screen and (max-width: 760px) {
+@media screen(min-width: 768px) and (max-width: 1024px) {
+   
+}
+@media screen and (max-width: 760px) /* mobile */{
     body {
         overflow-x: hidden;
     }
@@ -202,8 +245,7 @@ footer {
         top: 8vh;
         background-color: white;
         flex-direction: column;
-     
-        align-item: center;
+        align-items: center;
         transform: translate(100%);
         /*opacity: 0.4; */
         transition: transform 0.5s ease-in-out;
@@ -211,13 +253,25 @@ footer {
     
     .nav-links li {
         padding-bottom: 10px;
-
     }
     
     .burger {
         display: block;
     }
+    /* about me */
+    .about_me #txt{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+  
+    #image_right{
+        display: none;
+    }
+
+
 }
+
 
 .nav-active {
     transform: translateX(0%);

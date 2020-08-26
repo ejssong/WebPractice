@@ -8,9 +8,10 @@
 
     <nav>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
+            <li><a href="index.html#about">About</a></li>
             <li><a href="Song_Resume.pdf" target="_blank">Résumé</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#project">Experiences</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>   
     </nav>
 
