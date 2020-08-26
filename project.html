@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <script src="about.js"></script>
+    <title>Project Description</title>
+</head>
+<body>
+    <header>
+        <?php 
+            readfile("./header.php");
+        ?>     
+    </header>
+    <div class="aboutMe">
+        <div class="project_desc">
+            <h5> Educational Project </h5>
+            <div class="project slide1" id="1">
+                <img src="project1.jpeg" alt="project1 image" ></img></a>
+                <p> 2019 . 12 </p>
+                <p> Programming Language Uses </p> 
+                <ul>
+                    <li> HTML5 </li>
+                    <li> PHP </li>
+                    <li> Javasript </li>
+                    <li> jQuery </li>
+                    <li> CSS </li>          
+                </ul>
+            </div>
+            <div class="project slide2">
+                <img src="project2.jpeg" id="2" alt="project2 image"></img></a>
+                <p> 2020 . 05 </p> 
+                <p> Programming Language Uses </p> 
+                <ul>
+                    <li> HTML5 </li>
+                    <li> PHP </li>
+                    <li> Javasript </li>
+                    <li> CSS </li> 
+                </ul>
+            </div>
+            <div class="project slide3">
+                <img src="photo.jpeg" id= "3" alt="project3 image"></img></a>
+            </div>
+        </div>
+        
+        <!-- Previous & Next Carousel -->
+        <a class="prev" onclick = "nextSlide(-1)">&#10094;</a>
+        <a class="next" onclick = "nextSlide(1)">&#10095;</a>
+         
+
+     </div>
+
+    <footer>
+        <p>&copy;<span id="date"></span> 2020 Eunjin Song. All rights reserved.</p>
+    </footer>
+    
+    
+</body>
+</html>
