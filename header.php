@@ -3,7 +3,7 @@
 
 <header>
     <div class="nav-logo">
-            <a href="index.html">Eunjin Song </a>
+            <a href="index.html">Eunjin Song. </a>
     </div>
 
     <nav>

@@ -27,26 +27,76 @@
     </div>
     -->
     <div class="about_me" id="about">
-        <h3>  About Me   </h3> 
+        <h3>  About  </h3> 
         <div id="image_right">
             <img src="eunjin.jpeg" alt="self-portrait"></img>
         </div>
-
+       
         <div id="txt">
-            <h4>Hi, I'm Eunjin.</h4>
-            <p>  You can see the source code under the GitHub link.  </p> 
+            <h4> Hi, I'm Eunjin. </h4>
+            <p> I am Web Developer based in South Korea. </p>
+            <p> The purpose of the website is authenticating the projects and the skills I learned. </p>
+            <p> I pursue simple web design and interface. </p>
+            <p> Anyone interest my works, you can see the source code under the GitHub link.  </p> 
         </div>
+
     </div>
     <div class="project_image" id="project">
         <div class="image_set">
             <h3> Projects  </h3> 
-            <a href="project.html"><img src="project1.jpeg" alt="project1 image"></img></a>
-            <a href="project.html"><img src="project2.jpeg" alt="project2 image"></img></a>
-            <a href="project.html"><img src="photo.jpeg" alt="project3 image"></img></a>
+            <a href="project.html"><img src="project1.jpeg" alt="project1 image" id="image modal1"></img></a>
+            <a href="project.html"><img src="project2.jpeg" alt="project2 image" id="image modal1"></img></a>
+            <a href="project.html"><img src="photo.jpeg" alt="project3 image" id="image modal1"></img></a>
+
         </div>
      </div>
 
-   
+     <div class="contact" id="contact">
+        <button class="open-button" id ="open-button"> Contact me </button>
+
+        <div class="form-popup" id="myForm">
+            
+            <div class="form-container"> 
+                <span class="close">&times;</span><br>
+                <form action="mailto:eunjinsong8376@gmail.com" method="POST" enctype="multipart/form-data">
+                    <h3> Contact Me </h3>
+                    <label for="Name">Name :  </label>
+                    <input type="text" id="name" style = "width: 250px; height: 30px; "placeholder="Your Name."> <br>
+                    <label for="email">E - mail : </label>
+                    <input type="text" id="email" style = "width: 250px; height: 30px; " placeholder="Valid E-mail address."> <br><br>
+                    <label for="subject"> Subject : </label>
+                    <input type="text" id="subject" style = "width: 250px; height: 30px; " placeholder="Write subject."> <br><br>
+                    <label for="content">Content : </label>
+                    <input type="text" id="content" style = "width: 250px; height: 100px; " placeholder="Write content."> <br><br>
+                    <label><input type="submit" value="submit" style = "width: 50px; height: 20px; "></label>
+
+                </form>
+            </div>
+        </div>
+
+     </div> 
+
+     <script>
+         var modal = document.getElementById("myForm");
+
+         var btn = document.getElementById("open-button");
+
+         var span = document.getElementsByClassName("close")[0];
+
+         btn.onclick = function() {
+             modal.style.display = "block";
+         }
+         span.onclick = function() {
+            modal.style.display = "none";
+         }
+
+         window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+         }
+     </script>
+     
     <footer>
         <p>&copy;<span id="date"></span> 2020 Eunjin Song. All rights reserved.</p>
     </footer>
