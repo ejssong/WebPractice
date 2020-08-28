@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="about.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>Eunjin Song Portfolio</title>
@@ -40,11 +41,13 @@
         </div>
        
         <div id="txt">
-            <h4> Hi, I'm Eunjin. </h4>
+            <div class="typewriter">
+                <h4> Hi, I'm Eunjin. </h4>
+            </div>
             <p> I am Web Developer based in South Korea. </p>
             <p> The purpose of the website is authenticating the projects and the skills I learned. </p>
             <p> I pursue simple web design and interface. </p>
-            <p> Anyone interest my works, you can see the source code under the GitHub link.  </p> 
+            <p> Anyone interest my works, please see the source code under the GitHub link.  </p> 
         </div>
 
     </div>
@@ -75,7 +78,7 @@
                     <input type="text" id="subject" style = "width: 250px; height: 30px; " placeholder="Write subject."> <br><br>
                     <label for="content">Content : </label>
                     <input type="text" id="content" style = "width: 250px; height: 100px; " placeholder="Write content."> <br><br>
-                    <label><input class="submit" type="submit" value="submit" style = "width: 50px; height: 20px; "></label>
+                    <label><input class="submit" type="submit" value="submit" style = "width: 70px; height: 30px; font-size: 14px; "></label>
 
                 </form>
             </div>
@@ -114,25 +117,28 @@
             for (i = 0; i <main.length; i++) {
                 main[i].style.display="none";
             }
-            
-
             var count = setInterval(function() {
                 var c = parseInt($('.counter').text());
                 $('.counter').text((++c).toString());
-                if (c == 100) {
+                if (c == 99) {
                     clearInterval(count);
                     $('.counter').addClass('hide')
                     $('.preloader').addClass('active')
                 
                     main[mainIndex-1].style.display = "block";
                 }
-            },40)
+            },30)
         }
         
         counter()
     
      </script>
     <footer>
+        <div class="social_media">
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-github"></a>
+        </div>
         <p>&copy;<span id="date"></span> 2020 Eunjin Song. All rights reserved.</p>
     </footer>
 </body> 

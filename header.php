@@ -3,11 +3,12 @@
 
 <header>
     <div class="nav-logo">
-            <a href="index.html">Eunjin Song. </a>
+            <a>Eunjin Song. </a>
     </div>
 
     <nav>
         <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
             <li><a href="index.html#about">About</a></li>
             <li><a href="Song_Resume.pdf" target="_blank">Résumé</a></li>
             <li><a href="index.html#project">Experiences</a></li>
