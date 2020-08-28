@@ -6,16 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" type="text/css">
     <script src="about.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>Eunjin Song Portfolio</title>
 
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+
     <header>
     <?php 
         readfile("./header.php");
     ?>     
     </header>
+    
     <!--
     <div class="photo">
         <img src="" alt="index photo"> </img>
@@ -26,6 +32,7 @@
         <button class="contact_button" type="button">Contact Me</button>
     </div>
     -->
+    <main class="main"> 
     <div class="about_me" id="about">
         <h3>  About  </h3> 
         <div id="image_right">
@@ -44,9 +51,9 @@
     <div class="project_image" id="project">
         <div class="image_set">
             <h3> Projects  </h3> 
-            <a href="project.html"><img src="project1.jpeg" alt="project1 image" id="image modal1"></img></a>
-            <a href="project.html"><img src="project2.jpeg" alt="project2 image" id="image modal1"></img></a>
-            <a href="project.html"><img src="photo.jpeg" alt="project3 image" id="image modal1"></img></a>
+            <a href="project.html"><img class="image1" src="project1.jpeg" alt="project1 image" ></img></a>
+            <a href="project.html"><img class="image1" src="project2.jpeg" alt="project2 image" ></img></a>
+            <a href="project.html"><img class="image1" src="project3.jpeg" alt="project3 image" ></img></a>
 
         </div>
      </div>
@@ -68,15 +75,16 @@
                     <input type="text" id="subject" style = "width: 250px; height: 30px; " placeholder="Write subject."> <br><br>
                     <label for="content">Content : </label>
                     <input type="text" id="content" style = "width: 250px; height: 100px; " placeholder="Write content."> <br><br>
-                    <label><input type="submit" value="submit" style = "width: 50px; height: 20px; "></label>
+                    <label><input class="submit" type="submit" value="submit" style = "width: 50px; height: 20px; "></label>
 
                 </form>
             </div>
         </div>
 
      </div> 
+     </main>
 
-     <script>
+     <script type="text/javascript">
          var modal = document.getElementById("myForm");
 
          var btn = document.getElementById("open-button");
@@ -97,6 +105,33 @@
          }
      </script>
      
+     <script type="text/javascript">
+        var mainIndex = 1;
+        var main = document.getElementsByClassName("main");
+
+
+        function counter() {
+            for (i = 0; i <main.length; i++) {
+                main[i].style.display="none";
+            }
+            
+
+            var count = setInterval(function() {
+                var c = parseInt($('.counter').text());
+                $('.counter').text((++c).toString());
+                if (c == 100) {
+                    clearInterval(count);
+                    $('.counter').addClass('hide')
+                    $('.preloader').addClass('active')
+                
+                    main[mainIndex-1].style.display = "block";
+                }
+            },40)
+        }
+        
+        counter()
+    
+     </script>
     <footer>
         <p>&copy;<span id="date"></span> 2020 Eunjin Song. All rights reserved.</p>
     </footer>
