@@ -13,15 +13,16 @@
 </head>
 
 <body>
-    <div class="preloader">
-        <div class="counter">0</div>
-    </div>
 
     <header>
     <?php 
         readfile("./header.php");
     ?>     
     </header>
+
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
     
     <!--
     <div class="photo">
@@ -34,29 +35,13 @@
     </div>
     -->
     <main class="main"> 
-    <div class="about_me" id="about">
-        <h3>  About  </h3> 
-        <div id="image_right">
-            <img src="eunjin.jpeg" alt="self-portrait"></img>
-        </div>
-       
-        <div id="txt">
-            <div class="typewriter">
-                <h4> Hi, I'm Eunjin. </h4>
-            </div>
-            <p> I am Web Developer based in South Korea. </p>
-            <p> The purpose of the website is authenticating the projects and the skills I learned. </p>
-            <p> I pursue simple web design and interface. </p>
-            <p> Anyone interest my works, please see the source code under the GitHub link.  </p> 
-        </div>
 
-    </div>
     <div class="project_image" id="project">
         <div class="image_set">
-            <h3> Projects  </h3> 
-            <a href="project.html"><img class="image1" src="project1.jpeg" alt="project1 image" ></img></a>
-            <a href="project.html"><img class="image1" src="project2.jpeg" alt="project2 image" ></img></a>
-            <a href="project.html"><img class="image1" src="project3.jpeg" alt="project3 image" ></img></a>
+            <a href="project.html"><img class="image1" src="project_mockup1.png" alt="project1 image" ></img></a>
+            <a href="project.html"><img class="image1" src="project_mockup2.png" alt="project1 image" ></img></a>
+            <a href="project.html"><img class="image1" src="project_mockup3.png" alt="project2 image" ></img></a>
+        
 
         </div>
      </div>
@@ -70,13 +55,13 @@
                 <span class="close">&times;</span><br>
                 <form action="mailto:eunjinsong8376@gmail.com" method="POST" enctype="multipart/form-data">
                     <h3> Contact Me </h3>
-                    <label for="Name">Name :  </label>
-                    <input type="text" id="name" style = "width: 250px; height: 30px; "placeholder="Your Name."> <br>
-                    <label for="email">E - mail : </label>
+                    
+                    <input type="text" id="name" style = "width: 250px; height: 30px; "placeholder="Your Name."> <br> <br>
+                   
                     <input type="text" id="email" style = "width: 250px; height: 30px; " placeholder="Valid E-mail address."> <br><br>
-                    <label for="subject"> Subject : </label>
+                    
                     <input type="text" id="subject" style = "width: 250px; height: 30px; " placeholder="Write subject."> <br><br>
-                    <label for="content">Content : </label>
+                    
                     <input type="text" id="content" style = "width: 250px; height: 100px; " placeholder="Write content."> <br><br>
                     <label><input class="submit" type="submit" value="submit" style = "width: 70px; height: 30px; font-size: 14px; "></label>
 
@@ -114,9 +99,11 @@
 
 
         function counter() {
+        
             for (i = 0; i <main.length; i++) {
                 main[i].style.display="none";
             }
+    
             var count = setInterval(function() {
                 var c = parseInt($('.counter').text());
                 $('.counter').text((++c).toString());
@@ -124,21 +111,24 @@
                     clearInterval(count);
                     $('.counter').addClass('hide')
                     $('.preloader').addClass('active')
+                    
                 
                     main[mainIndex-1].style.display = "block";
+
+                    
                 }
+                
+                
             },30)
+            
+           
         }
+        
         
         counter()
     
      </script>
     <footer>
-        <div class="social_media">
-            <a href="#" class="fa fa-linkedin"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-github"></a>
-        </div>
         <p>&copy;<span id="date"></span> 2020 Eunjin Song. All rights reserved.</p>
     </footer>
 </body> 

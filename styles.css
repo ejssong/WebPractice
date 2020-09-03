@@ -10,38 +10,26 @@ h3 {
         margin: 0;
         width: 100%;
     }
+    .main {
+        display: inline-block;
+        position: relative;
+        animation: transitionIn 1s;
+    }
 
-/* preloader */
+ /* preloader */
     .preloader {
-        position: fixed;
-        top: 10vh;
-        display: flex;
         width: 100%;
-        height: 100vh;
-        background: #fefefe;
-        padding-left:6vw;
-        z-index:4;
+        overflow: auto;
+        left: 0;
+        bottom: 0;
+        padding-left: 6vw;
+        z-index: 1;
         -webkit-box-align: center;
-        align-items: center;
-
-    }
-
-    .preloader:before {
-        content: 'Loading';
-        position: absolute;
-        font-size: 12em;
-        font-weight: 250;
-        text-transform: uppercase;
-        color: rgba(255,255,255,.03);
-
-    }
-    .preloader.active {
-        transform: translateY(200vh);
-        transition: ease 1s;
-        transition-delay: 1s;
+        vertical-align: middle;
     }
     .counter {
         position: relative;
+ 
         color: #000;
         font-size: 16em;
         font-weight: 500;
@@ -51,13 +39,16 @@ h3 {
         content:'.';
         color: red;
         font-size: 0.5em;
-
     }
+
     .hide {
+        display: none;
         opacity: 0;
-        transition: 1s;
+        transition: 0.4s;
         pointer-events: none;
     }
+ 
+
 /* header */
     header {
         display: block;
@@ -130,26 +121,23 @@ h3 {
         white-space: nowrap;
         margin: 0;
         letter-spacing: .07em;
-        animation: typing 3s steps(60,end);
+        animation: typing 1s steps(0,end);
     }
     @keyframes typing {
         from {
-            width: 0
+            width: 0;
         }
         to {
-            width: 100%
+            width: 100%;
         }
     }
 
 /* about me */
     .about_me {
         display: inline-block;
-        border-top: 0.3px solid gray;
-        border-bottom: 0.3px solid gray;
         position: static;
         width: 100%;
-        margin: 20px;
-        /* text-align: center; */
+        /* margin: 20px; */
         padding-bottom: 20px;
         /* height: 35%; */
     }
@@ -174,39 +162,45 @@ h3 {
         /* float: right; */
     }
     #txt {
-        display: inline-block;
-        width: 50%;
-        padding-left: 10%;
+        display: grid;
+        justify-content: center;
+    }
+    #txt p {
+        font-size: 11px;
     }
 /* project */ 
     .project_image {
         width: 100%;
-        display: block;
+        display: inline-block;
         position: static;
         /* float: left; */
         /* text-align: center; */
     }
     .image_set {
-        position: inherit;
+        position: static;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        /* width: 50%; */
+        overflow: hidden;
     }
-    .project_image p {
+    .image_set p {
         display: block;
         font-size: 20px;
         text-align: center;
     }
-    .project_image img{
-        width: 400px;
-        height: 350px;
+    .image_set img{
+        width: 600px;
+        height: 450px;
         object-fit: contain;
         margin: 20px;
         text-align: center;
+        transform: scale(1);
+        transition: transform .2s;
     }
 
     .image_set img:hover {
+        transform: scale(1.1);
+        transition: transform .5s;
         -moz-box-shadow: 0 0 20px #ccc;
         -webkit-box-shadow: 0 0 10px #ccc;
         box-shadow: 0 0 30px #ccc;
@@ -273,10 +267,10 @@ h3 {
         padding-top: 30px;
         border: none;
         text-align: center;
-        display: inline-block;
+        display: block;
+        position: relative;
         cursor: pointer;
-        /* height: 200px; */
-        /* position: static; */
+        height: 200px;
     }
 
      .open-button{
@@ -350,8 +344,8 @@ h3 {
     }
 /* footer */
 footer {
-    display: inline-block;
-    position: static;
+    display: block;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -365,11 +359,10 @@ footer {
 }
 
 .social_media {
- 
-    display: inline-block;
+ display: inline-block;
 }
 .fa {
-    
+    display: inline-block;
     position: relative;
     padding: 20px;
     font-size: 20px;
@@ -422,11 +415,10 @@ footer {
     /* about me */
     .about_me {
         margin: 0;
+        
     }
     .about_me #txt{
         width: 100%;
-        display: block;
-        padding-right: 10%;
     }
     
     /* Responsive font-size change */ 
